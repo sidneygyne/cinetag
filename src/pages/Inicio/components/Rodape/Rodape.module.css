@@ -1,0 +1,24 @@
+.rodape {
+    background-color: var(--preto);
+    margin: 0;
+    padding-top: 33px;
+    padding-bottom: 33px;
+}
+
+.texto {
+    color: var(--banco);
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.125rem;
+}
+
+.redes_sociais {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.icone {
+    color: var(--banco);
+    font-size: 2rem;
+}

@@ -1,0 +1,8 @@
+.link {
+    font-size: 1,125rem;
+    font-weight: 400;
+    align-items: center;
+    color: var(--banco);
+    text-decoration: none;
+    padding: 1em;
+}
