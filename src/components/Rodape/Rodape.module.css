@@ -1,8 +1,8 @@
 .rodape {
     background-color: var(--preto);
     margin: 0;
-    padding-top: 33px;
-    padding-bottom: 33px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .texto {
@@ -25,4 +25,36 @@
 
 .icone:hover {
     transform: scale(1.3);
+}
+
+
+@media (max-width: 767px) {
+    .rodape {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    
+    .texto {
+        font-size: 0.8rem;
+    }
+    .icone {
+        color: var(--banco);
+        font-size: 1.5rem;
+    }
+}
+
+
+@media (max-width: 400px) {
+    .rodape {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    
+    .texto {
+        font-size: 0.6rem;
+    }
+    .icone {
+        color: var(--banco);
+        font-size: 1rem;
+    }
 }
