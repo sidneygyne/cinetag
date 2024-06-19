@@ -3,6 +3,7 @@
   --banco: #ffffff;
   --preto:#000000;
   --cinza: #e2e2e2;
+  --cinza2: #c9c6c6; 
 
 }
 
@@ -10,7 +11,7 @@
 body {
   margin: 0;
   font-family: var(--fonte);
-  background-color: var(--banco);
+  background-color: var(--cinza);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

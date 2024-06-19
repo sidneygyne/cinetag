@@ -1,11 +1,3 @@
-:root {
-    --fonte: 'Montserrat', sans-serif;
-    --banco: #ffffff;
-    --preto: #000000;
-    --cinza: #e2e2e2;
-
-}
-
 .container {
     display: flex;
     flex-direction: column;
@@ -13,9 +5,9 @@
     padding: 0 0 1em 0;
     margin-top: .5em;
     width: 282px;
-    background-color: var(--cinza);
-
-}
+    background-color: var(--cinza2);
+    box-shadow: 10px 10px 5px var(--preto);
+}   
 
 .capa {
     width: 100%;
@@ -24,6 +16,10 @@
 .container h2,
 .favoritar {
     padding: 0 1em;
+}
+
+.container h2 {
+    text-align: center;
 }
 
 .favoritar {
@@ -35,3 +31,16 @@
     color: var(--preto);
     text-align: left;
 }
+
+.container:hover {
+    transform: scale(1.15);
+}
+
+
+@media (max-width: 767px) {
+    .container h2 {
+        font-size: 1.2rem;
+        word-break: break-all;
+    }
+ }
+ 

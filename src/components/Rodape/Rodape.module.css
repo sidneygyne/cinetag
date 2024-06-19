@@ -22,3 +22,7 @@
     color: var(--banco);
     font-size: 2rem;
 }
+
+.icone:hover {
+    transform: scale(1.3);
+}
