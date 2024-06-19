@@ -1,10 +1,23 @@
 import Banner from "components/Banner";
 import Titulo from "components/Titulo";
 import Card from "components/Card";
-import videos from 'json/db.json';
+// import videos from 'json/db.json';
 import styles from './Inicio.module.css';
+import { useEffect, useState } from "react";
 
 function Inicio() {
+
+    //API EXTERNA
+    const [videos, setvideos] = useState([])
+    useEffect(() => {
+        fetch('https://json-server-rho-lovat.vercel.app/cinetag')
+            .then(resposta => resposta.json())
+            .then(dados => {
+                setvideos(dados)
+            })
+    }, [])
+    //FIM API EXTERNA
+
     return (
         <>
             <Banner imagem="Home" />

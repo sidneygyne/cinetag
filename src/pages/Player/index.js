@@ -2,19 +2,41 @@ import Banner from 'components/Banner'
 import styles from './Player.module.css'
 import Titulo from 'components/Titulo'
 import { useParams } from 'react-router-dom'
-import videos from 'json/db.json';
+// import videos from 'json/db.json';
+import NaoEncontrada from 'pages/NaoEncontrada';
+import { useEffect, useState } from 'react';
 
 function Player() {
-    const patametros = useParams()
-    const video = videos.find((video) => {
-        return video.id === Number(patametros.id)
-    })
+
+    //API EXTERNA
+    const [video, setvideo] = useState()
+    const parametros = useParams()
+    useEffect(() => {
+        fetch(`https://json-server-rho-lovat.vercel.app/cinetag?id=${parametros.id}`)
+            .then(resposta => resposta.json())
+            .then(dados => {
+                setvideo(...dados)
+            })
+    }, [parametros.id])
+
+    //FIM API EXTERNA
+
+    // const patametros = useParams()
+    // const video = videos.find((video) => {
+    //     return video.id === Number(patametros.id)
+    // })
+
+    if(!video) {
+        return (<NaoEncontrada/>
+        )
+        }
+
 
     return (
         <>
             <Banner imagem="Player" />
             <Titulo>
-                <h1>Player</h1>
+                <h1>{video.titulo}</h1>
             </Titulo>
             <section className={styles.container}>
                 <iframe
@@ -28,6 +50,8 @@ function Player() {
 
         </>
     )
+
+    
 }
 
 export default Player

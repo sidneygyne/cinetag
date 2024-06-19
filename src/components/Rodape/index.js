@@ -5,7 +5,7 @@ function Rodape() {
     return (
         <footer className={styles.rodape}>
             <h2 className={styles.texto}>Desenvolvido por Sidney Rodrigues Magalhães</h2>
-            <div class={styles.redes_sociais}>
+            <div className={styles.redes_sociais}>
                 <a href="https://github.com/sidneygyne" target="_blank" rel="noopener noreferrer" >
                     <IoLogoGithub className={styles.icone} alt="imagem github" />
                 </a>
